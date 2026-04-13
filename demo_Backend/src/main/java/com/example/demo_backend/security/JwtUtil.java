@@ -1,0 +1,40 @@
+package com.example.demo_backend.security;
+
+
+
+import io.jsonwebtoken.*;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
+
+@Component
+public class JwtUtil {
+
+  private final String SECRET = "secretKey123";
+
+  public String generarToken(String email) {
+    return Jwts.builder()
+      .setSubject(email)
+      .setIssuedAt(new Date())
+      .setExpiration(new Date(System.currentTimeMillis() + 86400000))
+      .signWith(SignatureAlgorithm.HS256, SECRET)
+      .compact();
+  }
+
+  public String obtenerEmail(String token) {
+    return Jwts.parser()
+      .setSigningKey(SECRET)
+      .parseClaimsJws(token)
+      .getBody()
+      .getSubject();
+  }
+
+  public boolean validarToken(String token) {
+    try {
+      Jwts.parser().setSigningKey(SECRET).parseClaimsJws(token);
+      return true;
+    } catch (Exception e) {
+      return false;
+    }
+  }
+}
