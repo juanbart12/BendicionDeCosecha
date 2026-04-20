@@ -19,6 +19,7 @@ import lombok.*;
     private Double precio;
     private Integer stock;
 
+
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;

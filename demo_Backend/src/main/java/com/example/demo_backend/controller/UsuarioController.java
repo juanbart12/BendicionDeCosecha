@@ -1,9 +1,10 @@
 package com.example.demo_backend.controller;
 
-
-import  com.example.demo_backend.dto.UsuarioDTO;
-import  com.example.demo_backend.service.UsuarioService;
+import com.example.demo_backend.dto.UsuarioDTO;
+import com.example.demo_backend.service.UsuarioService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,23 +23,24 @@ public class UsuarioController {
   }
 
   @GetMapping("/{id}")
-  public UsuarioDTO obtener(@PathVariable Long id) {
-    return usuarioService.obtenerUsuario(id);
+  public ResponseEntity<UsuarioDTO> obtener(@PathVariable Long id) {
+    return ResponseEntity.ok(usuarioService.obtenerUsuario(id));
   }
 
   @PostMapping
-  public UsuarioDTO crear(@RequestBody UsuarioDTO dto) {
-    return usuarioService.guardarUsuario(dto);
+  public ResponseEntity<UsuarioDTO> crear(@RequestBody UsuarioDTO dto) {
+    return new ResponseEntity<>(usuarioService.registrarUsuario(dto), HttpStatus.CREATED);
   }
 
   @PutMapping("/{id}")
-  public UsuarioDTO actualizar(@PathVariable Long id, @RequestBody UsuarioDTO dto) {
+  public ResponseEntity<UsuarioDTO> actualizar(@PathVariable Long id, @RequestBody UsuarioDTO dto) {
     dto.setId(id);
-    return usuarioService.guardarUsuario(dto);
+    return ResponseEntity.ok(usuarioService.registrarUsuario(dto));
   }
 
   @DeleteMapping("/{id}")
-  public void eliminar(@PathVariable Long id) {
+  public ResponseEntity<Void> eliminar(@PathVariable Long id) {
     usuarioService.eliminarUsuario(id);
+    return ResponseEntity.noContent().build();
   }
 }

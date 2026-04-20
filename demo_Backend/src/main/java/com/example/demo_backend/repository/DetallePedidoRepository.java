@@ -1,4 +1,4 @@
-package com.example.demo_backend.repositoy;
+package com.example.demo_backend.repository;
 
 
 import com.example.demo_backend.model.DetallePedido;
