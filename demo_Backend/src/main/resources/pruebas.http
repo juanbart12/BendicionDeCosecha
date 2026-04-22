@@ -1,0 +1,14 @@
+### Crear un nuevo producto (Simulando al usuario)
+POST http://localhost:8080/api/productos
+Content-Type: application/json
+
+{
+  "nombre": "Papa Express",
+  "descripcion": "Papa fresca de Bendición de Cosecha",
+  "precio": 2800.0,
+  "stock": 150
+}
+
+###
+### Listar todos los productos (Para ver si se guardó)
+GET http://localhost:8080/api/productos
