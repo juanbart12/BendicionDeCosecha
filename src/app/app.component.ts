@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 // 1. Importa el componente aquí
-import { ProductGridComponent } from './components/product-grid/product-grid.component';
+//import { ProductGridComponent } from './components/product-grid/product-grid.component';
 // 2. Si ya hiciste el footer, impórtalo también
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -13,7 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     RouterOutlet,
     NavbarComponent,
-    ProductGridComponent,
+    //ProductGridComponent,
     FooterComponent
   ],
   templateUrl: './app.component.html',

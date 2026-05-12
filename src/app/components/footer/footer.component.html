@@ -1,55 +1,90 @@
-<footer class="bg-white border-t border-gray-200 pt-16 pb-8">
-  <div class="container mx-auto px-10">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+<footer class="w-full">
+  <section class="relative w-full bg-stone-900 py-10 px-10 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <img src="img/manos.png" class="w-full h-full object-cover blur-sm">
+    </div>
 
-      <div class="space-y-4">
-        <div class="flex items-center space-x-2">
-          <div class="w-10 h-10 bg-bendicion-verde rounded-full flex items-center justify-center text-white font-bold text-sm">
-            BC
-          </div>
-          <span class="text-lg font-bold text-gray-800 leading-tight">BENDICION <br> <small class="text-[10px] uppercase block -mt-1">de cosecha</small></span>
+    <div class="relative z-10 container mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+
+      <div class="flex items-center space-x-4 max-w-xs">
+        <div class="w-16 h-16 flex-shrink-0 border-2 border-yellow-600 rounded-full overflow-hidden bg-white shadow-lg">
+          <img src="/img/logo.jpeg" class="w-full h-full object-cover">
         </div>
-        <p class="text-gray-500 text-sm leading-relaxed">
-          Llevamos lo mejor del campo colombiano a tu mesa, con procesos de alta calidad y compromiso con nuestros clientes.
+        <p class="text-white font-medium leading-tight">
+          Lleva a tu cocina lo mejor del <span class="text-yellow-500 italic">campo colombiano</span>
         </p>
       </div>
 
-      <div>
-        <h4 class="font-bold text-gray-900 mb-6">Navegación</h4>
-        <ul class="space-y-3 text-gray-600 text-sm">
-          <li class="hover:text-bendicion-verde cursor-pointer transition">Inicio</li>
-          <li class="hover:text-bendicion-verde cursor-pointer transition">Nuestros Productos</li>
-          <li class="hover:text-bendicion-verde cursor-pointer transition">Sobre Nosotros</li>
-          <li class="hover:text-bendicion-verde cursor-pointer transition">Preguntas Frecuentes</li>
-        </ul>
+      <div class="hidden lg:block w-px h-16 bg-gray-700"></div>
+
+      <div class="text-center lg:text-left">
+        <h3 class="text-white font-bold text-lg">¿Necesitas hacer un pedido?</h3>
+        <p class="text-gray-400 text-sm max-w-xs">Contáctanos ahora y recibe productos con la mejor calidad y frescura.</p>
       </div>
 
-      <div>
-        <h4 class="font-bold text-gray-900 mb-6">¿Necesitas un pedido?</h4>
+      <a href="https://wa.me/573150735585" target="_blank"
+         class="flex items-center space-x-3 bg-[#25D366] hover:bg-green-600 text-white px-8 py-3 rounded-xl font-bold transition shadow-xl no-underline transform hover:scale-105">
+        <span>Pedir por WhatsApp</span>
+      </a>
+
+      <div class="hidden lg:block w-px h-16 bg-gray-700"></div>
+
+      <div class="flex items-center space-x-3">
+        <div class="text-yellow-500 text-2xl">📞</div>
+        <div class="text-left">
+          <p class="text-white font-bold text-base leading-tight">315 073 5585</p>
+          <p class="text-white font-bold text-base leading-tight">310 327 1696</p>
+          <p class="text-gray-500 text-[9px] uppercase tracking-[0.2em] mt-1">Atención inmediata</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-white pt-16 pb-8 border-t border-gray-200">
+    <div class="container mx-auto px-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
         <div class="space-y-4">
-          <div class="flex items-start space-x-3">
-            <span class="text-bendicion-verde">📍</span>
-            <p class="text-sm text-gray-600">Chivata, Boyacá, Colombia</p>
+          <div class="flex flex-col">
+            <span class="text-2xl font-black text-gray-900 leading-none">BENDICIÓN</span>
+            <span class="text-yellow-600 font-bold text-sm tracking-[0.3em]">DE COSECHA</span>
           </div>
-          <div class="flex items-center space-x-3">
-            <span class="text-bendicion-verde">📞</span>
-            <p class="text-sm text-gray-600">315 073 5585 / 310 327 1696</p>
-          </div>
-          <div class="pt-2">
-            <button class="bg-[#25D366] text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-green-600 transition shadow-sm">
-              Escríbenos ahora
-            </button>
+          <p class="text-gray-500 text-sm leading-relaxed max-w-sm">
+            Comprometidos con el agro colombiano. Procesamos y distribuimos papas seleccionadas con los más altos estándares desde el corazón de Boyacá.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-gray-900 mb-6 uppercase text-xs tracking-widest border-b border-gray-100 pb-2 inline-block">Navegación</h4>
+          <ul class="space-y-3 text-gray-600 text-sm">
+            <li class="hover:text-green-700 cursor-pointer transition">Inicio</li>
+            <li class="hover:text-green-700 cursor-pointer transition">Nuestros Productos</li>
+            <li class="hover:text-green-700 cursor-pointer transition">Sobre Nosotros</li>
+            <li class="hover:text-green-700 cursor-pointer transition">Preguntas Frecuentes</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-gray-900 mb-6 uppercase text-xs tracking-widest border-b border-gray-100 pb-2 inline-block">Contacto Legal</h4>
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <span class="text-green-700">📍</span>
+              <p class="text-sm text-gray-600">Chivata, Boyacá, Colombia</p>
+            </div>
+            <div class="flex items-center space-x-3">
+              <span class="text-green-700">✉️</span>
+              <p class="text-sm text-gray-600">quebendiciondecosecha2021&#64;gmail.com</p>
+            </div>
           </div>
         </div>
       </div>
 
-    </div>
-
-    <div class="border-t border-gray-100 pt-8 flex flex-col md:row justify-between items-center text-xs text-gray-400">
-      <p>© 2026 Bendición de Cosecha. Todos los derechos reservados.</p>
-      <div class="flex space-x-6 mt-4 md:mt-0">
-        <span class="hover:text-gray-600 cursor-pointer">Política de Privacidad</span>
-        <span class="hover:text-gray-600 cursor-pointer">Términos y Condiciones</span>
+      <div class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-400 uppercase tracking-widest">
+        <p>© 2026 Bendición de Cosecha. Chivata - Boyacá.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <span class="hover:text-gray-600 cursor-pointer">Política de Privacidad</span>
+          <span class="hover:text-gray-600 cursor-pointer">Términos y Condiciones</span>
+        </div>
       </div>
     </div>
   </div>
